@@ -1,0 +1,57 @@
+
+
+
+Example 1
+Input
+           
+array = [ -1, 10,| -9,  2 ]
+                          
+lsum = -1 + arr[i]
+rsum = sum(arr from index 1 to end) = 3 - arr[i]
+
+
+
+
+
+Output
+2
+left [-1], right [10, -9, 2]:  left sum -1 < right sum 3
+left [-1, 10], right [-9, 2]: 
+left [-1, 10, -9], right [2]:  left sum 0 < right sum 2
+
+
+Example 2
+Input
+array = [1, 2, 3, 4, 5]
+
+
+Output
+3
+
+
+ */
+
+import java.io.*;
+import java.util.*;
+
+
+class Solution {
+
+
+  int count(int[] nums) {
+
+  }
+
+
+
+  public static void main(String[] args) {
+    ArrayList<String> strings = new ArrayList<String>();
+    strings.add("Hello, World!");
+    strings.add("Welcome to CoderPad.");
+    strings.add("This pad is running Java " + Runtime.version().feature());
+
+    for (String string : strings) {
+      System.out.println(string);
+    }
+  }
+}

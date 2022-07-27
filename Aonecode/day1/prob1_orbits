@@ -1,0 +1,50 @@
+/*
+You are programming for a prober that travels between satellite orbits.
+The radius of satellite orbits are given as a list. Find out the minimum operating distance one-way for the prober to cover K orbits on its track.
+
+
+After sorting the aray, find k continuous elements in the input where max(element) - min(element) is the minimum
+
+Example 1:
+Input
+orbit_altitudes = [160, 200, 350, 750, 800, 1000, 1250, 1500, 35800]
+K = 4
+
+Output
+500
+The prober has to travel at least 500 distance one-way to cover 4 altitudes including 750, 800, 1000 and 1250.   
+Therefore the result is 1250 - 750 = 500
+
+Example 2:
+Input 
+orbit_altitudes = [20000, 5000, 3000, 6000, 700, 11000, 2000, 15000, 14000]
+K = 3
+
+Output
+2300
+The prober has to travel at least 500 distance one-way to cover 3 altitudes including 700, 2000, and 3000.   
+Therefore the result is 3000 - 700 = 2300
+
+
+ */
+
+import java.io.*;
+import java.util.*;
+
+
+class Solution {
+
+
+
+
+  public static void main(String[] args) {
+    ArrayList<String> strings = new ArrayList<String>();
+    strings.add("Hello, World!");
+    strings.add("Welcome to CoderPad.");
+    strings.add("This pad is running Java " + Runtime.version().feature());
+
+    for (String string : strings) {
+      System.out.println(string);
+    }
+  }
+}

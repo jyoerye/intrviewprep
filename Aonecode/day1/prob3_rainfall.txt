@@ -1,0 +1,54 @@
+/*
+You have been asked to help measure rainfall in a region. The region is split into a number of zones in a row, identified as Zone 1, Zone 2, Zone3..., Zone N. 
+Each zone's rain amount starts as 0. Every time rain falls down the region, a range of zones receives a certain amount of precipitation. 
+Given the region's rainfall data for a period of time, build a function to determine the maximum amount of precipitation at any one zone.
+
+Input
+N = 6
+rainfall = [[3, 5, 100], [1, 4, 60], [6, 6, 30], [4, 5, 40]]
+
+Bucket Sort
+  60    60   160   200   140   30
+zone1 zone2 zone3 zone4 zone5 zone6
+
+
+Output
+200
+
+Each subarray [start, end, amount] in rainfall indicates that the amount of rain falls on the range from zone start to zone end (inclusive).
+[3, 5, 100] indicates Zone 3, 4, and 5 each received 100mm of rain.
+[1, 4, 60] indicates Zone 1, 2, 3, and 4 each received 60mm.
+[6, 6, 30] indicates Zone 6 received 30mm.
+[4, 5, 40] indicates Zone 4 and 5 received 40mm.
+The maximum amount of total precipitation in one zone is 200 at Zone 4.
+
+
+Constraints
+1<N<=10^6
+
+
+Function
+int maximumPrecipitation(int n, int[][] rainfall) 
+
+ */
+
+import java.io.*;
+import java.util.*;
+
+
+class Solution {
+
+
+
+
+  public static void main(String[] args) {
+    ArrayList<String> strings = new ArrayList<String>();
+    strings.add("Hello, World!");
+    strings.add("Welcome to CoderPad.");
+    strings.add("This pad is running Java " + Runtime.version().feature());
+
+    for (String string : strings) {
+      System.out.println(string);
+    }
+  }
+}

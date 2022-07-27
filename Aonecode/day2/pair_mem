@@ -1,0 +1,42 @@
+Each computing device should be assigned two applications, one foreground application and one background applications. A device has a limit amount of memory and cannot execute applications that require more memory than available memory. 
+The goal is to maximize the total utilization of memory of a given device. A foreground/background pair of applications is optimal if there isn't another pair that uses more memory than this pair, and uses less than equal to the memory of the device.
+Given two lists of applications ready to be assigned to a device, each application denoted as [app_id, memory_utilization]. Write a function to find the sets of foreground/background pair(s) that optimally utilize the given device's memory capacity. 
+
+Input
+memoryCapacity = 10
+foregroundApp = [[0, 9], [1, 5], [2, 1], [3, 4]]
+backgroundApp = [[0, 7], [1, 2], [2, 3], [3, 10]]
+
+target = 10
+
+Arrays.sort((o1,o2)->(o1[1]-o2[1]));
+int closest_pair = 0;    // closest pair <= target
+int res_index1 = -1, res_index2  = -1;
+List<List<Integer>> result_set = new ArrayList<>();
+int i = 0, j = b.length - 1;
+while(i<f.length && j>=0) {
+  if(f[i] + b[j] <= target) { 
+    if(f[i]+b[j] >= closest_pair) { //this is the closest pair by far
+        closest_pair = f[i] + b[j] ;
+        res_index1 = i;
+        res_index2 = j;
+        if(f[i]+b[j] > closest_pair) {
+            ?
+        }
+        result_set.add(new ArrayList({i,j}));
+    }
+    i++;
+  } else {
+    j--;
+  }
+}
+
+
+
+Output
+{(1, 2), (foregroundApp2, backgroundApp0)}
+The maximum memory use of a pair of foreground/background apps less than or equal to memoryCapacity is 8, which can be achieved by [foregroundApp1, backgroundApp2], 5 + 3 and [foregroundApp2, backgroundApp0], 1 + 7.
+
+
+Function
+List<List<Integer>> assignApplications(int memoryCapacity, int[][] foregroundApp, int[][] backgroundApp)
